@@ -1,0 +1,35 @@
+import random
+def main_game(user_input):
+    list = [0, 1, 2]
+    random_value = random.choice(list)
+    if(random_value ==0):
+        print("Computer choose Scissor against you")
+    elif(random_value == 1):
+        print("Computer choose Paper against you")
+    else:
+        print("Computer choose Stone against you")
+    if(random_value == user_input ):
+       print("It seems you and I thinks same, It's draw!")
+    elif(random_value == 0 and user_input==2):
+        print("Hurrah! You win")
+    elif(random_value == 0 and user_input==1):
+        print("Oh! You loose, best of luck for next time")
+    elif(random_value == 1 and user_input==0):
+        print("Hurrah! You win")
+    elif(random_value == 1 and user_input==2):
+        print("Oh! You loose, best of luck for next time")
+    elif(random_value == 2 and user_input==0):
+        print("Oh! You loose, best of luck for next time")
+    elif(random_value == 2 and user_input==1):
+        print("Hurrah! You win")
+
+string = input("Enter what you want to chosse in stone, paper and scissor: ")
+if(string =="scissor"):
+    user_input = 0
+elif(string =="paper"):
+    user_input = 1
+elif(string =="stone"):
+    user_input = 2
+else:
+    print("Error, please put one of three option only ")
+main_game(user_input)
